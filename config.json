@@ -1,0 +1,1 @@
+{"name":"Status","author":"EmpireDev","version":"1.4.0","admin_menus":{"SERVER__TITLE":{"Gestion des serveurs":{"icon":"cog","route":"/admin/status"}}},"navbar_routes":{"Status des serveurs":"/status"},"apiID":36,"useEvents":false,"permissions":{"available":[],"default":{"0":[],"2":[]}},"requirements":{"CMS":"^1.2.0"}}
