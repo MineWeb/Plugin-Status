@@ -1,3 +1,9 @@
 {
-	
+	"STATUS_TITLE": "Status of servers",
+		"STATUS_TITLE_SERV": "Status of",
+		"STATUS_SERV_PING": "ms",
+		"STATUS_SERV_MOTD": "MOTD",
+		"STATUS_SERV_DISP_ERROR": "Offline",
+		"STATUS_SERV_DISP_SUCCESS": "Online",
+		"STATUS_MOJANG": "Status of Mojang servers",	
 }
