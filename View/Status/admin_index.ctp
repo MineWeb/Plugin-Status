@@ -2,31 +2,31 @@
     <div class="row">
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Configuration général</h3>
+                <h3 class="box-title"><?= $Lang->get('STATUS_TITLE_SETTING');?></h3>
             </div>
             <div class="box-body">
                 <form action="<?= $this->Html->url(array('controller' => 'status', 'action' => 'configen_ajax')) ?>" method="POST" data-ajax="true" data-redirect-url="<?= $this->Html->url(array('controller' => 'status', 'action' => 'index', 'admin' => 'true')) ?>">
                   <input type="hidden" name="idConfigServerGen" value="<?= $configServerStats['ConfigServerStats']['id']; ?>">
                   <div class="form-group">
-                    <label>Afficher le status de Mojang</label>
+                    <label><?= $Lang->get('STATUS_MOJANG');?></label>
                     <br>
-                    <small>Si actif, le status des serveurs de Mojang sera affiché</small>
+                    <small><?= $Lang->get('STATUS_MOJANG_DESC');?></small>
                     <div class="radio">
                       <input type="radio" name="show_mojang_server" value="1" <?= ($configServerStats['ConfigServerStats']['isMojang'] == '1') ? 'checked=""' : '' ?>>
-                      <label>Afficher</label>
+                      <label><?= $Lang->get('STATUS_SHOW');?></label>
                     </div>
                     <div class="radio">
                       <input type="radio" name="show_mojang_server" value="0" <?= ($configServerStats['ConfigServerStats']['isMojang'] == '0') ? 'checked=""': '' ?>>
-                      <label>Ne pas afficher</label>
+                      <label><?= $Lang->get('STATUS_DONT_SHOW');?></label>
                     </div>
                   </div>
-                  <button class="btn btn-primary" type="submit">Envoyer</button>
+                  <button class="btn btn-primary" type="submit"><?= $Lang->get('GLOBAL__SUBMIT');?></button>
                </form>
             </div>
         </div>
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Gestion des serveurs | Status des serveurs</h3>
+                <h3 class="box-title"><?= $Lang->get('STATUS_TITLE_GESTION');?></h3>
             </div>
             <div class="box-body">
                 <?php foreach($servers as $server): ?>
@@ -45,50 +45,50 @@
                             <?php echo "<script>$('#img-form-server-".$server['Server']['id']."').attr('src','".$server['Server']['status-iconurl']."');</script>"; ?>
                           </div>
                           <div class="col-sm-8">
-                            <label>Votre description du serveur (Si vide, le MOTD du serveur sera affiché)</label>
+                            <label><?= $Lang->get('STATUS_TITLE_DESC');?></label>
                             <textarea class="form-control" rows="5"  name="motd_server"><?= $server['Server']['status-motd']; ?></textarea>
                             <br />
                             <div class="form-group">
-                              <label>Afficher l'adresse ip</label>
+                              <label><?= $Lang->get('STATUS_SHOW_IP');?></label>
                               <br>
-                              <small>Si actif, l'adresse ip du serveur sera affiché dans le status de celui-ci</small>
+                              <small><?= $Lang->get('STATUS_SHOW_IP_DESC');?></small>
                               <div class="radio">
                                 <input type="radio" name="show_ip_server" value="1" <?= ($server['Server']['status-isShowIp'] == '1') ? 'checked=""' : '' ?>>
-                                <label>Afficher</label>
+                                <label><?= $Lang->get('STATUS_SHOW');?></label>
                               </div>
                               <div class="radio">
                                 <input type="radio" name="show_ip_server" value="0" <?= ($server['Server']['status-isShowIp'] == '0') ? 'checked=""': '' ?>>
-                                <label>Ne pas afficher</label>
+                                <label><?= $Lang->get('STATUS_DONT_SHOW');?></label>
                               </div>
                             </div>
                             <div class="form-group">
-                              <label>Afficher le nombre de connectés</label>
+                              <label><?= $Lang->get('STATUS_SHOW_CONNECTED');?></label>
                               <br>
-                              <small>Si actif, le nombre de joueurs connectés sera affiché dans le status de celui-ci</small>
+                              <small><?= $Lang->get('STATUS_SHOW_CONNECTED_DESC');?></small>
                               <div class="radio">
                                 <input type="radio" name="show_count_server" value="1" <?= ($server['Server']['status-isShowCount'] == '1') ? 'checked=""' : '' ?>>
-                                <label>Afficher</label>
+                                <label><?= $Lang->get('STATUS_SHOW');?></label>
                               </div>
                               <div class="radio">
                                 <input type="radio" name="show_count_server" value="0" <?= ($server['Server']['status-isShowCount'] == '0') ? 'checked=""': '' ?>>
-                                <label>Ne pas afficher</label>
+                                <label><?= $Lang->get('STATUS_DONT_SHOW');?></label>
                               </div>
                             </div>
                             <div class="form-group">
-                              <label>Afficher le status de connexion</label>
+                              <label><?= $Lang->get('STATUS_SHOW_STATUS_CONNECTION');?></label>
                               <br>
-                              <small>Si actif, l'état de connexion sera affiché dans le status de celui-ci</small>
+                              <small><?= $Lang->get('STATUS_SHOW_STATUS_CONNECTION_DESC');?>Si actif, l'état de connexion sera affiché dans le status de celui-ci</small>
                               <div class="radio">
                                 <input type="radio" name="show_status_server" value="1" <?= ($server['Server']['status-isShowStatus'] == '1') ? 'checked=""' : '' ?>>
-                                <label>Afficher</label>
+                                <label><?= $Lang->get('STATUS_SHOW');?></label>
                               </div>
                               <div class="radio">
                                 <input type="radio" name="show_status_server" value="0" <?= ($server['Server']['status-isShowStatus'] == '0') ? 'checked=""': '' ?>>
-                                <label>Ne pas afficher</label>
+                                <label><?= $Lang->get('STATUS_DONT_SHOW');?></label>
                               </div>
                             </div>
                             <br />
-                            <button class="btn btn-primary" type="submit">Envoyer</button>
+                            <button class="btn btn-primary" type="submit"><?= $Lang->get('GLOBAL__SUBMIT');?></button>
                           </div>
                         </form>
                     </div>

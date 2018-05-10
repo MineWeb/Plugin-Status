@@ -17,7 +17,7 @@
                     </div>
                     <?php }?>
                     <div class="col-sm-10">
-                      <?php if($server['conf']['status-isShowIp'] == "1"){ ?><h5>Adresse IP: <?= $server['ip']; ?></h5><?php }?>
+                      <?php if($server['conf']['status-isShowIp'] == "1"){ ?><h5><?= $Lang->get('STATUS_IP');?> <?= $server['ip']; ?></h5><?php }?>
                       <?php if($server['conf']['status-motd'] == ''){ ?>
                         <h6><?= $Lang->get('STATUS_SERV_MOTD');?>: <?= $server["motd"]; ?></h6>
                       <?php }else{ ?>
