@@ -72,10 +72,10 @@
                       switch($icons)
                       {
 
-                        case 'green':  $icons = 'glyphicon glyphicon-ok'; break;
-                        case 'red':    $icons = 'glyphicon glyphicon-remove'; break; //Do nothing, red is good
-                        case 'yellow': $icons = 'glyphicon glyphicon-warning-sign'; break; //Do nothing, yellow is good
-                        default:       $icons = 'glyphicon glyphicon-remove'; break; //Something went wrong, assume it's down
+                        case 'green':  $icons = 'fa fa-check'; break;
+                        case 'red':    $icons = 'fa fa-times'; break; //Do nothing, red is good
+                        case 'yellow': $icons = 'fa fa-exclamation-triangle'; break; //Do nothing, yellow is good
+                        default:       $icons = 'fa fa-times'; break; //Something went wrong, assume it's down
                       }
                       $colour = array_values($address)[0];
                       switch($colour)
